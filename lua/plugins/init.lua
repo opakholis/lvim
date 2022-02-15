@@ -75,6 +75,12 @@ lvim.plugins = {
     event = "BufRead",
   },
   --
+  -- Telescope
+  --
+  {
+    "nvim-telescope/telescope-fzy-native.nvim",
+  },
+  --
   -- Themes
   --
   {

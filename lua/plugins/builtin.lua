@@ -37,6 +37,15 @@ M.config = function()
       ["<C-p>"] = actions.cycle_history_prev,
     },
   }
+  lvim.builtin.telescope.extensions = {
+    fzy_native = {
+      override_generic_sorter = false,
+      override_file_sorter = true,
+    },
+  }
+  lvim.builtin.telescope.on_config_done = function()
+    require("telescope").load_extension "fzy_native"
+  end
   --
   -- Terminal
   --
