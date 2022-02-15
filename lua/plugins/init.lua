@@ -56,6 +56,14 @@ lvim.plugins = {
     config = function()
       require("plugins.zen").config()
     end,
+    event = "BufRead",
+  },
+  {
+    "folke/twilight.nvim",
+    config = function()
+      require("plugins.twilight").config()
+    end,
+    event = "BufRead",
   },
   --
   -- Themes
