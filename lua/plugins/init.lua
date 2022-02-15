@@ -45,6 +45,13 @@ lvim.plugins = {
   -- Productivity
   --
   {
+    "github/copilot.vim",
+    config = function()
+      require("plugins.copilot").config()
+    end,
+    disable = not lvim.builtin.copilot,
+  },
+  {
     "folke/zen-mode.nvim",
     config = function()
       require("plugins.zen").config()
