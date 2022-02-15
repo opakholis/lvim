@@ -85,6 +85,13 @@ lvim.plugins = {
     event = "InsertEnter",
   },
   {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("plugins.blankline").config()
+    end,
+    event = "BufRead",
+  },
+  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("plugins.colorizer").config()
