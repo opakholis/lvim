@@ -107,7 +107,7 @@ lvim.plugins = {
   -- Telescope
   --
   {
-    "nvim-telescope/telescope-fzy-native.nvim",
+    "natecraddock/telescope-zf-native.nvim",
   },
   --
   -- Themes
