@@ -110,6 +110,14 @@ lvim.plugins = {
   -- Treesitter
   --
   {
+    "m-demare/hlargs.nvim",
+    requires = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("plugins.hlargs").config()
+    end,
+    disable = not lvim.builtin.fancy_highlight_args,
+  },
+  {
     "p00f/nvim-ts-rainbow",
     event = "BufRead",
     config = function()

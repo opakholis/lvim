@@ -19,3 +19,4 @@ lvim.builtin.notify.active = true
 
 lvim.builtin.copilot = true -- if you want microsoft to abuse your soul
 lvim.builtin.fancy_rename = true -- fancy rename
+lvim.builtin.fancy_highlight_args = true -- fancy highlight args (CPU usage is probably not happy)
