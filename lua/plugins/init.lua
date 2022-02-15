@@ -42,6 +42,15 @@ lvim.plugins = {
     event = "BufRead",
   },
   --
+  -- Productivity
+  --
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("plugins.zen").config()
+    end,
+  },
+  --
   -- Themes
   --
   {
