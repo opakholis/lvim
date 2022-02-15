@@ -1,3 +1,6 @@
+-- Configure which-key plugin keymaps
+require "keymaps.which-key"
+
 -- LunarVim keymaps
 lvim.keys.insert_mode["jk"] = "<ESC>:w<CR>"
 lvim.keys.normal_mode["<C-a>"] = "<ESC>ggVG<CR>"
