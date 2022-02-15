@@ -84,4 +84,11 @@ lvim.plugins = {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter",
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("plugins.colorizer").config()
+    end,
+    event = "BufRead",
+  },
 }
