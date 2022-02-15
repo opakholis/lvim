@@ -9,3 +9,8 @@ lvim.keys.normal_mode["<C-a>"] = "<ESC>ggVG<CR>"
 if lvim.builtin.copilot then
   lvim.keys.insert_mode["<C-h>"] = { [[copilot#Accept("\<CR>")]], { expr = true, script = true } }
 end
+
+-- Character delete uses specific register
+vim.api.nvim_set_keymap("n", "x", '"xx', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "D", '"dD', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "dd", '"ddd', { noremap = true, silent = true })
