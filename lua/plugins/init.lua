@@ -54,7 +54,7 @@ lvim.plugins = {
     ft = "markdown",
   },
   --
-  -- Movement
+  -- Movement / Motions
   --
   {
     "karb94/neoscroll.nvim",
@@ -62,6 +62,13 @@ lvim.plugins = {
       require("neoscroll").setup()
     end,
     event = "BufRead",
+  },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+    end,
   },
   --
   -- Productivity

@@ -15,6 +15,13 @@ if lvim.builtin.fancy_rename then
   lvim.builtin.which_key.vmappings["r"] = { "<ESC><CMD>lua require('renamer').rename()<CR>", "Rename" }
 end
 
+lvim.builtin.which_key.mappings["m"] = {
+  name = "+Hop",
+  c = { "<cmd>HopChar2<cr>", "Char2" },
+  w = { "<cmd>HopWord<cr>", "Word" },
+  p = { "<cmd>HopPattern<cr>", "Pattern" },
+}
+
 -- Which-key: +Terminal
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Terminal",
