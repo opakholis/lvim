@@ -3,6 +3,8 @@
 -- ==================
 --
 require("plugins.builtin").config()
+-- Lualine
+require("plugins.lualine").config()
 -- Nvim-tree
 require("plugins.nvimtree").config()
 -- Treesitter
