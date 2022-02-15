@@ -15,5 +15,12 @@ if lvim.builtin.fancy_rename then
   lvim.builtin.which_key.vmappings["r"] = { "<ESC><CMD>lua require('renamer').rename()<CR>", "Rename" }
 end
 
+-- Which-key: +Terminal
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Terminal",
+  b = { "<cmd>split term://zsh<cr>", "Terminal to below" },
+  r = { "<cmd>vsplit term://zsh<cr>", "Terminal to right" },
+}
+
 -- Which-key: Zen-Mode
 lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen Mode" }
