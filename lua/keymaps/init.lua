@@ -4,6 +4,7 @@ require "keymaps.which-key"
 -- LunarVim keymaps
 lvim.keys.insert_mode["jk"] = "<ESC>:w<CR>"
 lvim.keys.normal_mode["<C-a>"] = "<ESC>ggVG<CR>"
+lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 -- Github Copilot
 if lvim.builtin.copilot then
