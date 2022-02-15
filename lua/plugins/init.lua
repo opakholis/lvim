@@ -41,6 +41,13 @@ lvim.plugins = {
     event = "BufRead",
     disable = not lvim.builtin.editorconfig,
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("plugins.blankline").config()
+    end,
+    event = "BufRead",
+  },
   --
   -- Movement
   --
@@ -97,17 +104,6 @@ lvim.plugins = {
     "catppuccin/nvim",
   },
   {
-    "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("plugins.blankline").config()
-    end,
-    event = "BufRead",
-  },
-  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("plugins.colorizer").config()
@@ -131,5 +127,9 @@ lvim.plugins = {
     config = function()
       require("plugins.ts_rainbow").config()
     end,
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
   },
 }
