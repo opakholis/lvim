@@ -104,4 +104,14 @@ lvim.plugins = {
     end,
     event = "BufRead",
   },
+  --
+  -- Treesitter
+  --
+  {
+    "p00f/nvim-ts-rainbow",
+    event = "BufRead",
+    config = function()
+      require("plugins.ts_rainbow").config()
+    end,
+  },
 }
