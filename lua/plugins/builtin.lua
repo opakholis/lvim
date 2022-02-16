@@ -37,23 +37,6 @@ M.config = function()
       ["<C-p>"] = actions.cycle_history_prev,
     },
   }
-  lvim.builtin.telescope.extensions = {
-    ["zf-native"] = {
-      file = {
-        enable = true,
-        highlight_results = true,
-        match_filename = true,
-      },
-      generic = {
-        enable = true,
-        highlight_results = true,
-        match_filename = false,
-      },
-    },
-  }
-  lvim.builtin.telescope.on_config_done = function()
-    require("telescope").load_extension "zf-native"
-  end
   --
   -- Terminal
   --

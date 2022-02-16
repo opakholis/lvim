@@ -104,12 +104,6 @@ lvim.plugins = {
     event = "BufRead",
   },
   --
-  -- Telescope
-  --
-  {
-    "natecraddock/telescope-zf-native.nvim",
-  },
-  --
   -- Themes
   --
   {
