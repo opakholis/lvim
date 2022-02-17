@@ -46,6 +46,8 @@ M.config = function()
   -- Which Key
   --
   lvim.builtin.which_key.setup.window.winblend = 12
+  lvim.builtin.which_key.setup.layout.spacing = 6
+  lvim.builtin.which_key.setup.window.padding = { 2, 0, 2, 0 }
   lvim.builtin.which_key.setup.ignore_missing = true
 end
 
