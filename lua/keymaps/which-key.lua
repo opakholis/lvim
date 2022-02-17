@@ -9,6 +9,17 @@ lvim.builtin.which_key.mappings["d"] = {
   r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
 }
 
+-- Which-key: +Harpoon
+lvim.builtin.which_key.mappings["h"] = {
+  name = "+Harpoon",
+  ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Jump to file 1" },
+  ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Jump to file 2" },
+  ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Jump to file 3" },
+  ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Jump to file 4" },
+  a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add file" },
+  h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle UI" },
+}
+
 -- Which-key: +Lsp
 if lvim.builtin.fancy_rename then
   lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Rename" }

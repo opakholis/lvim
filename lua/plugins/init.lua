@@ -57,6 +57,11 @@ lvim.plugins = {
   -- Movement / Motions
   --
   {
+    "ThePrimeagen/harpoon",
+    event = "BufWinEnter",
+    requires = { "nvim-lua/plenary.nvim", "nvim-lua/popup.nvim" },
+  },
+  {
     "karb94/neoscroll.nvim",
     config = function()
       require("neoscroll").setup()
