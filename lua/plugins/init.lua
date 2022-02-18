@@ -33,6 +33,12 @@ lvim.plugins = {
     end,
     event = "InsertEnter",
   },
+  {
+    "nathom/filetype.nvim",
+    config = function()
+      require("plugins.filetype").config()
+    end,
+  },
   --
   -- General
   --
