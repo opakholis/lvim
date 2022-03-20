@@ -2,7 +2,7 @@
 require "options.neovim"
 
 -- Format buffer when buffer/file is saved
-lvim.format_on_save = true
+lvim.format_on_save = false
 
 -- Leader key
 lvim.leader = "space"
