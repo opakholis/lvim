@@ -14,8 +14,12 @@ lvim.colorscheme = "catppuccin"
 lvim.log.level = "warn"
 
 -- Enable builtin plugins
-lvim.builtin.dashboard.active = true
+-- TODO: User Config for predefined plugins
+-- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "startify" -- or "dashboard" / "startify"
 lvim.builtin.notify.active = true
+lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.copilot = true -- if you want microsoft to abuse your soul
 lvim.builtin.editorconfig = true -- enable/disable editorconfig
