@@ -28,7 +28,7 @@ M.config = function()
       ["<C-c>"] = actions.close,
       ["<C-n>"] = actions.cycle_history_next,
       ["<C-p>"] = actions.cycle_history_prev,
-      ["<CR>"] = actions.select_default + actions.center,
+      ["<CR>"] = actions.select_default,
     },
     n = {
       ["<C-j>"] = actions.move_selection_next,
