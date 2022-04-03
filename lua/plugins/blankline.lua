@@ -36,12 +36,17 @@ M.config = function()
       "operation_type",
     },
     filetype_exclude = {
+      "alpha",
       "help",
-      "startify",
       "packer",
+      "markdown",
+      "startify",
       "dashboard",
       "NvimTree",
+      "LuaTree",
       "Trouble",
+      "lspinfo",
+      "TelescopePrompt",
       "", -- for all buffers without a file type
     },
     show_trailing_blankline_indent = false,
@@ -53,8 +58,6 @@ M.config = function()
     use_treesitter = true,
   }
   vim.g.indent_blankline_char = "▏"
-  -- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
-  vim.wo.colorcolumn = "99999"
 end
 
 return M
