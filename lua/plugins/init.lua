@@ -88,9 +88,22 @@ lvim.plugins = {
   -- Productivity
   --
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
     config = function()
-      require("plugins.copilot").config()
+      vim.schedule(function()
+        require("copilot").setup {
+          plugin_manager_path = vim.fn.expand "$XDG_DATA_HOME" .. "/lunarvim/site/pack/packer",
+        }
+      end)
+    end,
+    disable = not lvim.builtin.copilot,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+    config = function()
+      lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
     end,
     disable = not lvim.builtin.copilot,
   },

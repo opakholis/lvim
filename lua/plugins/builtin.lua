@@ -38,6 +38,20 @@ M.config = function()
     },
   }
   --
+  -- CMP
+  --
+  lvim.builtin.cmp.sources = {
+    { name = "copilot", group_index = 2 },
+    { name = "nvim_lsp", group_index = 2 },
+    { name = "path", group_index = 2 },
+    { name = "luasnip", group_index = 2 },
+    { name = "buffer", max_item_count = 2, keyword_length = 5 },
+    { name = "calc" },
+    { name = "emoji" },
+    { name = "treesitter" },
+    { name = "crates" },
+  }
+  --
   -- Terminal
   --
   lvim.builtin.terminal.active = true
