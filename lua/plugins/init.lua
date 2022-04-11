@@ -29,9 +29,9 @@ lvim.plugins = {
   {
     "ray-x/lsp_signature.nvim",
     config = function()
-      require("lsp_signature").setup()
+      require("plugins/lsp_signature").config()
     end,
-    event = "InsertEnter",
+    event = { "BufRead", "BufNew" },
   },
   {
     "nathom/filetype.nvim",
@@ -103,6 +103,7 @@ lvim.plugins = {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
     config = function()
+      -- table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
       lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
     end,
     disable = not lvim.builtin.copilot,
