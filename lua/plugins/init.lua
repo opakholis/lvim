@@ -72,7 +72,7 @@ lvim.plugins = {
     config = function()
       require("neoscroll").setup()
     end,
-    event = "BufRead",
+    event = "WinScrolled",
   },
   {
     "phaazon/hop.nvim",
