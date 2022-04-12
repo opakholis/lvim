@@ -109,15 +109,6 @@ lvim.plugins = {
     disable = not lvim.builtin.copilot,
   },
   {
-    "filipdutescu/renamer.nvim",
-    config = function()
-      require("renamer").setup {
-        title = "Rename",
-      }
-    end,
-    disable = not lvim.builtin.fancy_rename,
-  },
-  {
     "folke/zen-mode.nvim",
     config = function()
       require("plugins.zen").config()

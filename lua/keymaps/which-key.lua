@@ -20,12 +20,6 @@ lvim.builtin.which_key.mappings["h"] = {
   h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle UI" },
 }
 
--- Which-key: +Lsp
-if lvim.builtin.fancy_rename then
-  lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Rename" }
-  lvim.builtin.which_key.vmappings["r"] = { "<ESC><CMD>lua require('renamer').rename()<CR>", "Rename" }
-end
-
 lvim.builtin.which_key.mappings["m"] = {
   name = "+Hop",
   c = { "<cmd>HopChar2<cr>", "Char2" },
