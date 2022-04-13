@@ -24,7 +24,6 @@ lvim.builtin.which_key.mappings["m"] = {
   name = "+Hop",
   c = { "<cmd>HopChar2<cr>", "Char2" },
   w = { "<cmd>HopWord<cr>", "Word" },
-  p = { "<cmd>HopPattern<cr>", "Pattern" },
 }
 
 -- Which-key: +Terminal
