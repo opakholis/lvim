@@ -68,11 +68,18 @@ lvim.plugins = {
     requires = { "nvim-lua/plenary.nvim", "nvim-lua/popup.nvim" },
   },
   {
-    "karb94/neoscroll.nvim",
+    "declancm/cinnamon.nvim",
     config = function()
-      require("neoscroll").setup()
+      require("cinnamon").setup {
+        default_keymaps = true,
+        extra_keymaps = true,
+        extended_keymaps = false,
+        centered = true,
+        disable = false,
+        scroll_limit = 150,
+      }
     end,
-    event = "WinScrolled",
+    event = "BufRead",
   },
   {
     "phaazon/hop.nvim",
@@ -89,13 +96,14 @@ lvim.plugins = {
   --
   {
     "zbirenbaum/copilot.lua",
-    event = "InsertEnter",
+    event = "VimEnter",
     config = function()
-      vim.schedule(function()
+      vim.defer_fn(function()
         require("copilot").setup {
           plugin_manager_path = vim.fn.expand "$XDG_DATA_HOME" .. "/lunarvim/site/pack/packer",
+          ft_disable = { "markdown" },
         }
-      end)
+      end, 100)
     end,
     disable = not lvim.builtin.copilot,
   },
