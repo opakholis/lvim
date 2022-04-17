@@ -12,24 +12,18 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 -- Does the current working directory (project) have a Prettier configuration?
 --
 local utils = require "lsp.utils"
-local project_has_prettier_config = function()
-  local hasprettier = (vim.fn.glob ".prettierrc*" ~= "" or utils.is_in_package_json "prettier")
-  -- print("Project does has prettier configured? " .. tostring(hasprettier))
-  return hasprettier
+local project_has_eslint_config = function()
+  local eslint = (vim.fn.glob ".eslintrc*" ~= "" or utils.is_in_package_json "eslint")
+  -- print("Project does has eslint configured? " .. tostring(eslint))
+  return eslint
+end
+
+local project_has_stylelint_config = function()
+  local stylelint = (vim.fn.glob ".stylelintrc*" ~= "" or utils.is_in_package_json "stylelint")
+  return stylelint
 end
 
 local linters_table = {
-  {
-    exe = "eslint_d",
-    filetypes = {
-      "javascript",
-      "javascriptreact",
-      "svelte",
-      "typescript",
-      "typescriptreact",
-      "vue",
-    },
-  },
   {
     exe = "shellcheck",
     filetypes = {
@@ -40,28 +34,9 @@ local linters_table = {
     },
   },
   {
-    exe = "stylelint",
-    filetypes = {
-      "css",
-      "scss",
-    },
-  },
-  {
     exe = "luacheck",
     filetypes = {
       "lua",
-    },
-  },
-  {
-    exe = "markdownlint",
-    filetype = {
-      "markdown",
-    },
-  },
-  {
-    exe = "write-good",
-    filetypes = {
-      "markdown",
     },
   },
 }
@@ -82,12 +57,10 @@ local formatters_table = {
       "zsh",
     },
   },
-}
-
-if project_has_prettier_config() == true then
-  table.insert(formatters_table, {
-    exe = "prettierd",
+  {
+    exe = "prettier",
     filetypes = {
+      "css",
       "html",
       "javascript",
       "javascriptreact",
@@ -99,15 +72,40 @@ if project_has_prettier_config() == true then
       "vue",
       "yaml",
     },
-  })
-else
-  table.insert(formatters_table, {
-    exe = "prettierd",
+  },
+}
+
+if project_has_eslint_config() == true then
+  table.insert(linters_table, {
+    exe = "eslint_d",
     filetypes = {
-      "html",
-      "json",
-      "markdown",
-      "yaml",
+      "javascript",
+      "javascriptreact",
+      "svelte",
+      "typescript",
+      "typescriptreact",
+      "vue",
+    },
+  })
+  table.insert(formatters_table, {
+    exe = "eslint_d",
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "svelte",
+      "typescript",
+      "typescriptreact",
+      "vue",
+    },
+  })
+end
+
+if project_has_stylelint_config() == true then
+  table.insert(linters_table, {
+    exe = "stylelint",
+    filetypes = {
+      "css",
+      "scss",
     },
   })
 end
