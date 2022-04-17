@@ -1,7 +1,5 @@
 -- General Configuration
 require "lsp.config"
--- Emmet LS
-require "lsp.emmet"
 -- Tailwindcss
 require "lsp.tailwindcss"
 
