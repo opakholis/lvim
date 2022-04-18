@@ -88,8 +88,16 @@ lvim.plugins = {
   -- Productivity
   --
   {
+    "github/copilot.vim",
+    config = function()
+      require("plugins.copilot").config()
+    end,
+    disable = not lvim.builtin.copilot.active or lvim.builtin.copilot.cmp,
+  },
+  {
     "zbirenbaum/copilot.lua",
-    event = "VimEnter",
+    after = "nvim-cmp",
+    requires = { "zbirenbaum/copilot-cmp" },
     config = function()
       vim.defer_fn(function()
         require("copilot").setup {
@@ -98,16 +106,7 @@ lvim.plugins = {
         }
       end, 100)
     end,
-    disable = not lvim.builtin.copilot,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-    config = function()
-      -- table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
-      lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-    end,
-    disable = not lvim.builtin.copilot,
+    disable = not lvim.builtin.copilot.cmp,
   },
   {
     "folke/zen-mode.nvim",
