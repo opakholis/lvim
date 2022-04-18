@@ -2,7 +2,12 @@
 require "options.neovim"
 
 -- Format buffer when buffer/file is saved
-lvim.format_on_save = false
+lvim.format_on_save = {
+  ---@usage pattern string pattern used for the autocommand (e.g: '*.lua')
+  pattern = "*",
+  ---@usage timeout number timeout in ms for the format request (Default: 1000)
+  timeout = 5000,
+}
 
 -- Leader key
 lvim.leader = "space"
