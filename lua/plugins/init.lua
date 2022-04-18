@@ -70,14 +70,7 @@ lvim.plugins = {
   {
     "declancm/cinnamon.nvim",
     config = function()
-      require("cinnamon").setup {
-        default_keymaps = true,
-        extra_keymaps = true,
-        extended_keymaps = false,
-        centered = true,
-        disable = false,
-        scroll_limit = 150,
-      }
+      require("plugins.cinnamon").config()
     end,
     event = "BufRead",
   },
