@@ -14,6 +14,6 @@ lvim.keys.normal_mode["<TAB>"] = "<cmd>lua vim.lsp.buf.signature_help()<CR>"
 -- end
 
 -- Character delete uses specific register
-vim.api.nvim_set_keymap("n", "x", '"xx', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "D", '"dD', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "dd", '"ddd', { noremap = true, silent = true })
+vim.keymap.set("n", "x", '"xx', { noremap = true, silent = true })
+vim.keymap.set("n", "D", '"dD', { noremap = true, silent = true })
+vim.keymap.set("n", "dd", '"ddd', { noremap = true, silent = true })
