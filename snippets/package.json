@@ -1,0 +1,7 @@
+{
+  "name": "nvim-snippets",
+  "author": "opakholis",
+  "engines": {
+    "vscode": "^1.66.2"
+  }
+}
