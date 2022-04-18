@@ -6,17 +6,18 @@ M.config = function()
   end
 
   local components = require "lvim.core.lualine.components"
-
   -- Remove treesitter and lsp form the config
   lvim.builtin.lualine.sections.lualine_x = {
     components.diagnostics,
     components.filetype,
   }
-
   -- Replace progressbar with location
   lvim.builtin.lualine.sections.lualine_z = {
     components.location,
   }
+
+  -- config
+  lvim.builtin.lualine.options.globalstatus = true
 end
 
 return M

@@ -24,7 +24,6 @@ lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "startify" -- or "dashboard" / "startify"
 lvim.builtin.notify.active = true
-lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.copilot = true -- if you want microsoft to abuse your soul
 lvim.builtin.editorconfig = true -- enable/disable editorconfig
