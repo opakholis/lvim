@@ -9,9 +9,11 @@ lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
 lvim.keys.normal_mode["<TAB>"] = "<cmd>lua vim.lsp.buf.signature_help()<CR>"
 
 -- Github Copilot
--- if lvim.builtin.copilot then
---   lvim.keys.insert_mode["<C-h>"] = { [[copilot#Accept("\<CR>")]], { expr = true, script = true } }
--- end
+if lvim.builtin.copilot.active then
+  lvim.keys.insert_mode["<c-h>"] = { [[copilot#Accept("\<CR>")]], { expr = true, script = true } }
+  lvim.keys.insert_mode["<M-]>"] = { "<Plug>(copilot-next)", { silent = true } }
+  lvim.keys.insert_mode["<M-[>"] = { "<Plug>(copilot-previous)", { silent = true } }
+end
 
 -- Character delete uses specific register
 vim.keymap.set("n", "x", '"xx', { noremap = true, silent = true })
