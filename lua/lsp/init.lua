@@ -23,7 +23,7 @@ end
 
 local linters_table = {
   {
-    exe = "shellcheck",
+    command = "shellcheck",
     filetypes = {
       "sh",
       "shell",
@@ -32,7 +32,7 @@ local linters_table = {
     },
   },
   {
-    exe = "luacheck",
+    command = "luacheck",
     filetypes = {
       "lua",
     },
@@ -41,13 +41,13 @@ local linters_table = {
 
 local formatters_table = {
   {
-    exe = "stylua",
+    command = "stylua",
     filetypes = {
       "lua",
     },
   },
   {
-    exe = "shfmt",
+    command = "shfmt",
     filetypes = {
       "sh",
       "shell",
@@ -56,7 +56,7 @@ local formatters_table = {
     },
   },
   {
-    exe = "prettier",
+    command = "prettier",
     filetypes = {
       "css",
       "html",
@@ -75,7 +75,7 @@ local formatters_table = {
 
 if project_has_eslint_config() == true then
   table.insert(linters_table, {
-    exe = "eslint_d",
+    command = "eslint_d",
     filetypes = {
       "javascript",
       "javascriptreact",
@@ -86,7 +86,7 @@ if project_has_eslint_config() == true then
     },
   })
   table.insert(formatters_table, {
-    exe = "eslint_d",
+    command = "eslint_d",
     filetypes = {
       "javascript",
       "javascriptreact",
@@ -100,7 +100,7 @@ end
 
 if project_has_stylelint_config() == true then
   table.insert(linters_table, {
-    exe = "stylelint",
+    command = "stylelint",
     filetypes = {
       "css",
       "scss",
@@ -113,11 +113,11 @@ linters.setup(linters_table)
 
 -- Disable formatting capability of tsserver and jsonls
 -- as we use prettier and/or eslint_d to format/fix
-lvim.lsp.on_attach_callback = function(client, _)
-  if client.name ~= "tsserver" and client.name ~= "jsonls" then
-    return
-  end
+-- lvim.lsp.on_attach_callback = function(client, _)
+--   if client.name ~= "tsserver" and client.name ~= "jsonls" then
+--     return
+--   end
 
-  client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.document_range_formatting = false
-end
+--   client.resolved_capabilities.document_formatting = false
+--   client.resolved_capabilities.document_range_formatting = false
+-- end
