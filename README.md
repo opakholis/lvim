@@ -1,0 +1,3 @@
+# Bloated LunarVim
+
+WIP
