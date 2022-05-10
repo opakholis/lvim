@@ -55,9 +55,8 @@ lvim.plugins = {
     event = "BufRead",
   },
   {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
+    "npxbr/glow.nvim",
+    ft = { "markdown" },
   },
   --
   -- Movement / Motions
