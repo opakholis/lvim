@@ -40,16 +40,18 @@ M.config = function()
   --
   -- CMP
   --
+  lvim.builtin.cmp.formatting.max_width = 65
   lvim.builtin.cmp.sources = {
     { name = "copilot", group_index = 2 },
     { name = "nvim_lsp", group_index = 2 },
-    { name = "path", group_index = 2 },
-    { name = "luasnip", group_index = 2 },
-    { name = "buffer", max_item_count = 2, keyword_length = 5 },
-    { name = "calc" },
-    { name = "emoji" },
-    { name = "treesitter" },
-    { name = "crates" },
+    { name = "path", group_index = 2, max_item_count = 5 },
+    { name = "luasnip", group_index = 2, max_item_count = 5 },
+    { name = "buffer", group_index = 2, max_item_count = 5, keyword_length = 5 },
+  }
+  lvim.builtin.cmp.experimental = {
+    ghost_text = false,
+    native_menu = false,
+    custom_menu = true,
   }
   --
   -- Terminal
