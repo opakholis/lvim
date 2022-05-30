@@ -129,7 +129,6 @@ lvim.plugins = {
     as = "catppuccin",
     config = function()
       require("themes.catppuccin").config()
-      vim.cmd [[colorscheme catppuccin]]
     end,
   },
   {
