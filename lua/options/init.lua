@@ -28,6 +28,6 @@ lvim.builtin.notify.active = true
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "startify" -- or "dashboard" / "startify"
 
-lvim.builtin.copilot = { active = true, cmp = true } -- if you want microsoft to abuse your soul
+lvim.builtin.copilot = { active = true, cmp = false } -- if you want microsoft to abuse your soul
 lvim.builtin.editorconfig = true -- enable/disable editorconfig
 lvim.builtin.fancy_highlight_args = true -- fancy highlight args (CPU usage is probably not happy)
