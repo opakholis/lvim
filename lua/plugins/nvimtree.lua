@@ -5,8 +5,9 @@ M.config = function()
     return
   end
 
-  lvim.builtin.nvimtree.setup.view.side = "left"
-  lvim.builtin.nvimtree.show_icons.git = 0
+  lvim.builtin.nvimtree.setup.view.hide_root_folder = true
+  lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+  lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
   lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
 end
 
