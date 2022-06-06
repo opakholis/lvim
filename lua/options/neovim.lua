@@ -19,6 +19,6 @@ vim.opt.timeoutlen = 500 -- Keymap timeout
 vim.opt.relativenumber = true -- Relative row number
 vim.g.glow_border = "rounded"
 vim.g.dashboard_disable_statusline = 1
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+-- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 -- https://sw.kovidgoyal.net/kitty/faq/#some-special-symbols-are-rendered-small-truncated-in-kitty
 vim.cmd [[let &t_ut='']]

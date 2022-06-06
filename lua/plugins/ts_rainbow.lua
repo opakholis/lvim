@@ -7,8 +7,8 @@ M.config = function()
   end
 
   -- fetch colors from catppuccin API
-  local cp_api = require "catppuccin.api.colors"
-  local colors = cp_api.get_colors()
+  -- local cp_api = require "catppuccin.api.colors"
+  -- local colors = cp_api.get_colors()
 
   ts_rainbow.setup {
     rainbow = {
@@ -16,11 +16,11 @@ M.config = function()
       disable = { "html" },
       extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
       max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
-      colors = {
-        colors.mauve,
-        colors.sky,
-        colors.green,
-      }, -- table of hex strings
+      -- colors = {
+      --   colors.mauve,
+      --   colors.sky,
+      --   colors.green,
+      -- }, -- table of hex strings
     },
   }
 end
