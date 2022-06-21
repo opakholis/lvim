@@ -17,6 +17,7 @@ M.config = function()
     always_scroll = false, -- Scroll the cursor even when the window hasn't scrolled.
     centered = true, -- Keep cursor centered in window when using window scrolling.
     default_delay = 10, -- The default delay (in ms) between lines when scrolling.
+    hide_cursor = false, -- Hide the cursor when scrolling. Requires enabling termguicolors.
     horizontal_scroll = true, -- Enable smooth horizontal scrolling when view shifts left or right.
     scroll_limit = 100, -- Max number of lines moved before scrolling is skipped.
   }
