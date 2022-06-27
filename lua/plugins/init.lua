@@ -80,9 +80,6 @@ lvim.plugins = {
       require("hop").setup()
     end,
   },
-  {
-    "mg979/vim-visual-multi",
-  },
   --
   -- Productivity
   --
