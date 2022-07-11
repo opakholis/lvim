@@ -37,6 +37,8 @@ M.config = function()
       ["<C-p>"] = actions.cycle_history_prev,
     },
   }
+  lvim.builtin.telescope.defaults.path_display = { shorten = 4 }
+  lvim.builtin.telescope.defaults.prompt_prefix = "$ "
   --
   -- CMP
   --
