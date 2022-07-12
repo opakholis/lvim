@@ -6,6 +6,7 @@ require "lsp.tailwindcss"
 -- Configure formatters and linters manually
 local linters = require "lvim.lsp.null-ls.linters"
 local formatters = require "lvim.lsp.null-ls.formatters"
+local code_actions = require "lvim.lsp.null-ls.code_actions"
 --
 -- Does the current working directory (project) have a Prettier configuration?
 --
@@ -20,6 +21,8 @@ local project_has_stylelint_config = function()
   local stylelint = (vim.fn.glob ".stylelintrc*" ~= "" or utils.is_in_package_json "stylelint")
   return stylelint
 end
+
+local code_actions_table = {}
 
 local linters_table = {
   {
@@ -96,6 +99,17 @@ if project_has_eslint_config() == true then
       "vue",
     },
   })
+  table.insert(code_actions_table, {
+    command = "eslint_d",
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "svelte",
+      "typescript",
+      "typescriptreact",
+      "vue",
+    },
+  })
 end
 
 if project_has_stylelint_config() == true then
@@ -108,8 +122,9 @@ if project_has_stylelint_config() == true then
   })
 end
 
-formatters.setup(formatters_table)
 linters.setup(linters_table)
+formatters.setup(formatters_table)
+code_actions.setup(code_actions_table)
 
 -- Disable formatting capability of tsserver and jsonls
 -- as we use prettier and/or eslint_d to format/fix
