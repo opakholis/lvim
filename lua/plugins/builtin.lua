@@ -23,14 +23,15 @@ M.config = function()
   local actions = require "telescope.actions"
   lvim.builtin.telescope.defaults.mappings = {
     i = {
+      ["<C-c>"] = actions.close,
       ["<C-j>"] = actions.move_selection_next,
       ["<C-k>"] = actions.move_selection_previous,
-      ["<C-c>"] = actions.close,
       ["<C-n>"] = actions.cycle_history_next,
       ["<C-p>"] = actions.cycle_history_prev,
       ["<CR>"] = actions.select_default,
     },
     n = {
+      ["<esc>"] = actions.close,
       ["<C-j>"] = actions.move_selection_next,
       ["<C-k>"] = actions.move_selection_previous,
       ["<C-n>"] = actions.cycle_history_next,
@@ -38,7 +39,9 @@ M.config = function()
     },
   }
   lvim.builtin.telescope.defaults.path_display = { shorten = 4 }
+  lvim.builtin.telescope.defaults.winblend = 10
   lvim.builtin.telescope.defaults.prompt_prefix = "$ "
+  lvim.builtin.telescope.defaults.selection_caret = "> "
   --
   -- CMP
   --
