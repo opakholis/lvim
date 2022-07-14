@@ -1,12 +1,13 @@
 -- Which-key: +Diagnostics
-lvim.builtin.which_key.mappings["d"] = {
-  name = "+Diagnotics",
-  t = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
-  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace" },
-  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document" },
-  q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+lvim.builtin.which_key.mappings["T"] = {
+  name = "+Diagnostics",
+  t = { "<cmd>TodoLocList<cr>", "Todo" },
   l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace" },
 }
 
 -- Which-key: +Harpoon
