@@ -17,11 +17,14 @@ M.config = function()
     floating_window = false, -- show hint in a floating window, set to false for virtual text only mode
     floating_window_above_cur_line = true,
 
+    floating_window_off_x = 1, -- adjust float windows x position.
+    floating_window_off_y = 1, -- adjust float windows y position.
+
     fix_pos = false, -- set to true, the floating window will not auto-close until finish all parameters
     hint_enable = true, -- virtual hint enable
     hint_prefix = "🐼 ", -- Panda for parameter
     hint_scheme = "String",
-    hi_parameter = "Search", -- how your parameter will be highlight
+    hi_parameter = "LspSignatureActiveParameter", -- how your parameter will be highlight
     max_height = 12, -- max height of signature floating_window
     max_width = 80, -- max_width of signature floating_window, line will be wrapped if exceed max_width
     handler_opts = {
@@ -30,7 +33,6 @@ M.config = function()
 
     always_trigger = false, -- sometime show signature on new line or in middle of parameter can be confusing
     -- auto_close_after = nil, -- autoclose signature float win after x sec, disabled if nil.
-    check_completion_visible = true, -- adjust position of signature window relative to completion popup
     -- extra_trigger_chars = {}, -- Array of extra characters that will trigger signature completion, e.g., {"(", ","}
     zindex = 200, -- by default it will be on top of all floating windows, set to 50 send it to bottom
 
