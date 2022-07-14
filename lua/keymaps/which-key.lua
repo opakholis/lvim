@@ -20,12 +20,6 @@ lvim.builtin.which_key.mappings["h"] = {
   h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle UI" },
 }
 
-lvim.builtin.which_key.mappings["m"] = {
-  name = "+Hop",
-  c = { "<cmd>HopChar2<cr>", "Char2" },
-  w = { "<cmd>HopWord<cr>", "Word" },
-}
-
 -- Which-key: +Terminal
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Terminal",

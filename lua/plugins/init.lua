@@ -77,7 +77,7 @@ lvim.plugins = {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup()
+      require("plugins.hop").config()
     end,
   },
   --
