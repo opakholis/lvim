@@ -84,6 +84,10 @@ lvim.plugins = {
   -- Productivity
   --
   {
+    "s-u-d-o-e-r/vim-ray-so-beautiful",
+    event = "BufRead",
+  },
+  {
     "github/copilot.vim",
     config = function()
       require("plugins.copilot").config()
@@ -117,6 +121,13 @@ lvim.plugins = {
       require("plugins.twilight").config()
     end,
     event = "BufRead",
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
   },
   --
   -- Themes
