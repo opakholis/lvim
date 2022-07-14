@@ -13,6 +13,7 @@ if lvim.builtin.copilot.active then
   lvim.keys.insert_mode["<c-h>"] = { [[copilot#Accept("\<CR>")]], { expr = true, script = true } }
   lvim.keys.insert_mode["<M-]>"] = { "<Plug>(copilot-next)", { silent = true } }
   lvim.keys.insert_mode["<M-[>"] = { "<Plug>(copilot-previous)", { silent = true } }
+  lvim.keys.insert_mode["<M-\\>"] = { "<Cmd>vertical Copilot panel<CR>", { silent = true } }
 end
 
 -- Character delete uses specific register
