@@ -24,8 +24,9 @@ lvim.builtin.which_key.mappings["h"] = {
 -- Which-key: +Terminal
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Terminal",
-  b = { "<cmd>split term://zsh<cr>", "Terminal to below" },
-  r = { "<cmd>vsplit term://zsh<cr>", "Terminal to right" },
+  t = { "<cmd>ToggleTerm<cr>", "Terminal to float" },
+  b = { "<cmd>ToggleTerm direction=horizontal size=10<cr>", "Terminal to below" },
+  r = { "<cmd>ToggleTerm direction=vertical size=50<cr>", "Terminal to right" },
 }
 
 -- Which-key: Zen-Mode

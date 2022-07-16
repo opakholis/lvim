@@ -1,9 +1,6 @@
 -- Autocommands
 require "commands.autocommands"
 
-vim.cmd [[command ExecVsh set splitright | vnew | set filetype=sh | read !sh #]]
-vim.cmd [[command ExecSh set splitbelow | new | set filetype=sh | read !sh #]]
-
 -- Customize vimdiff colors
 vim.cmd [[
   au VimEnter * hi DiffAdd    guifg=NONE guibg=#2A303A
