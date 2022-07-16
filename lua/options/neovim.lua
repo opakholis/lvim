@@ -13,6 +13,13 @@ local disabled_plugins = {
 for _, plugin in pairs(disabled_plugins) do
   vim.g["loaded_" .. plugin] = 1
 end
+vim.opt.fillchars = {
+  fold = " ",
+  diff = "╱",
+  foldopen = "▾",
+  foldsep = "│",
+  foldclose = "▸",
+}
 vim.opt.wrap = true
 vim.opt.cmdheight = 1
 vim.opt.timeoutlen = 500 -- Keymap timeout
