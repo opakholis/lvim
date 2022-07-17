@@ -22,12 +22,14 @@ lvim.builtin.which_key.mappings["h"] = {
 }
 
 -- Which-key: +Terminal
-lvim.builtin.which_key.mappings["t"] = {
-  name = "+Terminal",
-  t = { "<cmd>ToggleTerm<cr>", "Terminal to float" },
-  b = { "<cmd>ToggleTerm direction=horizontal size=10<cr>", "Terminal to below" },
-  r = { "<cmd>ToggleTerm direction=vertical size=50<cr>", "Terminal to right" },
-}
+if lvim.builtin.terminal.active then
+  lvim.builtin.which_key.mappings["t"] = {
+    name = "+Terminal",
+    t = { "<cmd>ToggleTerm<cr>", "Terminal to float" },
+    b = { "<cmd>ToggleTerm direction=horizontal size=10<cr>", "Terminal to below" },
+    r = { "<cmd>ToggleTerm direction=vertical size=50<cr>", "Terminal to right" },
+  }
+end
 
 -- Which-key: Zen-Mode
 lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen Mode" }

@@ -61,8 +61,9 @@ M.config = function()
   --
   -- Terminal
   --
-  lvim.builtin.terminal.active = true
-  lvim.builtin.terminal.float_opts = { border = "curved", winblend = 12 }
+  if lvim.builtin.terminal.active then
+    lvim.builtin.terminal.float_opts = { border = "curved", winblend = 12 }
+  end
   --
   -- Which Key
   --
