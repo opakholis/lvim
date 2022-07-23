@@ -5,9 +5,25 @@ M.config = function()
     return
   end
 
-  -- if you don't want all the parsers change this to a table of the ones you want
-  lvim.builtin.treesitter.ensure_installed = "maintained"
+  lvim.builtin.treesitter.ensure_installed = {
+    "bash",
+    "css",
+    "javascript",
+    "json",
+    "jsonc",
+    "lua",
+    "markdown",
+    "scss",
+    "toml",
+    "tsx",
+    "typescript",
+    "yaml",
+  }
   lvim.builtin.treesitter.autotag.enable = true
+  lvim.builtin.treesitter.highlight.enable = true
+  lvim.builtin.treesitter.highlight.disable = function(_, bufnr)
+    return vim.api.nvim_buf_line_count(bufnr) > 1000
+  end
 end
 
 return M
